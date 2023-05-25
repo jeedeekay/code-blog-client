@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { UserContext } from './UserContext';
+import { UserContext } from '../Utils/UserContext';
 
 const Header = () => {
     const {userInfo, setUserInfo} = useContext(UserContext);
@@ -10,7 +10,7 @@ const Header = () => {
             credentials: 'include'
         }).then(response => {
             response.json().then(userInfo => {
-                
+                setUserInfo(userInfo);
             })
         })
     }, []);
