@@ -1,16 +1,18 @@
-const Post = () => {
+import {formatISO9075} from 'date-fns';
+
+const Post = ({title, summary, cover, content, createdAt, author}) => {
     return (
       <div className='post'>
         <div className='image'>
-          <img src='https://cdn.britannica.com/54/162454-050-D6CDF316/turkey.jpg' alt='' />
+          <img src={'http://localhost:4000/' + cover} alt='' />
         </div>
         <div className='texts'>
-          <h2>Turkey</h2>
+          <h2>{title}</h2>
           <p className='info'>
-            <a className='author'>Gavin Kinder</a>
-            <time>2023-5-21</time>
+            <a className='author'>{author.username}</a>
+            <time>{formatISO9075(new Date(createdAt))}</time>
           </p>
-          <p className='summary'>Turkey, either of two species of birds classified as members of either the family Phasianidae or Meleagrididae (order Galliformes).</p>
+          <p className='summary'>{summary}</p>
         </div>
       </div>
     );
