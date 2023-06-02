@@ -46,9 +46,14 @@ div.post {
     margin-bottom: 30px;
 }
 
-div.post div.texts h2{
+div.post div.texts h2 {
     margin: 0;
     font-size: 1.8rem;
+}
+
+div.post div.texts a {
+    text-decoration: none;
+    color: inherit;
 }
 
 div.post p.info {

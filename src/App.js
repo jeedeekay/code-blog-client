@@ -1,6 +1,7 @@
 import HomePage from './Pages/HomePage';
 import LoginPage from './Pages/LoginPage';
 import RegisterPage from './Pages/RegisterPage';
+import PostPage from './Pages/PostPage';
 import CreatePost from './Pages/CreatePost';
 import { Routes, Route } from 'react-router';
 import './App.css';
@@ -16,6 +17,7 @@ function App() {
                     <Route path='/login' element={<LoginPage />} />
                     <Route path='/register' element={<RegisterPage />} />
                     <Route path='/create' element={<CreatePost />} />
+                    <Route path='/post/:id' element={<PostPage />} />
                 </Route>
             </Routes>
         </UserContextProvider>
