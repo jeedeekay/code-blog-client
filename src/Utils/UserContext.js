@@ -1,4 +1,4 @@
-const { createContext, Children, useState } = require('react');
+const { createContext, useState } = require('react');
 
 export const UserContext = createContext({});
 

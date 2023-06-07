@@ -3,6 +3,7 @@ import LoginPage from './Pages/LoginPage';
 import RegisterPage from './Pages/RegisterPage';
 import PostPage from './Pages/PostPage';
 import CreatePost from './Pages/CreatePost';
+import EditPost from './Pages/EditPost';
 import { Routes, Route } from 'react-router';
 import './App.css';
 import { UserContextProvider } from './Utils/UserContext';
@@ -18,6 +19,7 @@ function App() {
                     <Route path='/register' element={<RegisterPage />} />
                     <Route path='/create' element={<CreatePost />} />
                     <Route path='/post/:id' element={<PostPage />} />
+                    <Route path='/edit/:id' element={<EditPost />} />
                 </Route>
             </Routes>
         </UserContextProvider>
